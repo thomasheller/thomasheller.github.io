@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas Heller | Software Developer</title>
+    <link>https://thomasheller.github.io/index.xml</link>
+    <description>Recent content on Thomas Heller | Software Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 21 Jan 2017 12:31:49 +0100</lastBuildDate>
+    <atom:link href="https://thomasheller.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Home</title>
+      <link>https://thomasheller.github.io/home/</link>
+      <pubDate>Sat, 21 Jan 2017 12:31:49 +0100</pubDate>
+      
+      <guid>https://thomasheller.github.io/home/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a passionate software developer focusing on agile Java and mobile/web development.&lt;/p&gt;
+
+&lt;p&gt;I also love yoga, meditation, vedanta philosophy and ayurveda.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Input</title>
+      <link>https://thomasheller.github.io/input/</link>
+      <pubDate>Sun, 25 Sep 2016 14:19:20 +0200</pubDate>
+      
+      <guid>https://thomasheller.github.io/input/</guid>
+      <description>
+
+&lt;p&gt;Some inspiring books, talks, websites for software developers:&lt;/p&gt;
+
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/&#34;&gt;Clean Code: A Handbook of Agile Software Craftsmanship&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/&#34;&gt;Design Patterns&lt;/a&gt; by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/&#34;&gt;Domain-Driven Design&lt;/a&gt; by Eric Evans&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Domain-Specific-Languages-Addison-Wesley-Signature-Fowler/dp/0321712943/&#34;&gt;Domain-Specific Languages&lt;/a&gt; by Martin Fowler&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658/&#34;&gt;Extreme Programming Explained&lt;/a&gt; by Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627/&#34;&gt;Growing Object-Oriented Software, Guided by Tests&lt;/a&gt; by Steve Freeman, Nat Pryce&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/&#34;&gt;Patterns of Enterprise Application Architecture&lt;/a&gt; by Martin Fowler&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672/&#34;&gt;Refactoring&lt;/a&gt; by Martin Fowler and Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530/&#34;&gt;Test Driven Development By Example&lt;/a&gt; by Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/&#34;&gt;Working Effectively with Legacy Code&lt;/a&gt; by Robert C. Martin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;talks&#34;&gt;Talks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=4F72VULWFvc&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=1&#34;&gt;The Clean Code Talks &amp;#8211; Inheritance, Polymorphism, &amp;#038; Testing&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-FRm3VPhseI&amp;amp;#038;index=2&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=2&#34;&gt;The Clean Code Talks &amp;#8211; Global State and Singletons&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RlfLCWKxHJ0&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=3&#34;&gt;The Clean Code Talks &amp;#8211; Don&amp;#8217;t Look For Things!&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-FRm3VPhseI&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=4&#34;&gt;The Clean Code Talks &amp;#8211; Global State and Singletons&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wEhu57pih5w&amp;amp;#038;index=5&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=5&#34;&gt;The Clean Code Talks &amp;#8211; Unit Testing&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=acjvKJiOvXw&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=8&#34;&gt;The Clean Code Talks &amp;#8211; OO Design for Testability&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=XcT4yYu_TTs&#34;&gt;How to Write Clean, Testable Code&lt;/a&gt; by Miško Hevery&lt;/li&gt;
+&lt;li&gt;accompanying PDF: &lt;a href=&#34;http://misko.hevery.com/attachments/Guide-Writing%20Testable%20Code.pdf&#34;&gt;Guide: Writing Testable Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;websites&#34;&gt;Websites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://stackexchange.com&#34;&gt;Stack Exchange Network&lt;/a&gt;&lt;/strong&gt; &amp;#8211; great place for programming questions and answers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://joelonsoftware.com&#34;&gt;Joel on Software&lt;/a&gt;&lt;/strong&gt; &amp;#8211; Joel Spolsky&amp;#8217;s blog on software engineering&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://martinfowler.com/&#34;&gt;martinfowler.com&lt;/a&gt;&lt;/strong&gt; &amp;#8211; Martin Fowler&amp;#8217;s website about OOP, continuous delivery etc.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://thomasheller.github.io/about-me/</link>
+      <pubDate>Sun, 25 Sep 2016 14:19:17 +0200</pubDate>
+      
+      <guid>https://thomasheller.github.io/about-me/</guid>
+      <description>
+
+&lt;h2 id=&#34;yoga-and-it&#34;&gt;Yoga and IT&lt;/h2&gt;
+
+&lt;p&gt;I find that yoga and meditation help me focus my thoughts, be more
+creative and productive. The physical exercises compensate for poor
+posture that results from many hours of desk work.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;From June 2015 to June 2016, I worked at &lt;a href=&#34;http://www.yoga-vidya.de&#34;&gt;Yoga Vidya&lt;/a&gt; &amp;#8211; Europe&amp;#8217;s biggest yoga seminar house &amp;#8211; where I provide IT services as well as guiding meditations and being an assistant teacher in yoga classes and teacher training courses. I practice the &lt;a href=&#34;https://en.wikipedia.org/wiki/Five_Tibetan_Rites&#34;&gt;Five Tibetan Rites&lt;/a&gt; daily.&lt;/li&gt;
+&lt;li&gt;In October 2014, I took several months off from regular work to study yoga source texts like the &lt;em&gt;Bhagavad Gita&lt;/em&gt; and the &lt;em&gt;Upanishads&lt;/em&gt; in-depth and to complete an intensive yoga teacher training course.&lt;/li&gt;
+&lt;li&gt;As part of my New Year&amp;#8217;s resolution for 2014 to live a healthier life, I started practicing yoga and meditation on a regular basis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;spiritual-experience&#34;&gt;Spiritual Experience&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In May 2014, I began a &lt;a href=&#34;https://en.wikipedia.org/wiki/Simple_living&#34;&gt;simple living&lt;/a&gt; project. I greatly reduced my possessions to spend more quality time doing things that really matter. Along the way, I co-founded &lt;a href=&#34;http://minimalisten.org/&#34;&gt;minimalisten.org&lt;/a&gt;, a German-speaking community for simple living enthusiasts.&lt;/li&gt;
+&lt;li&gt;Since December 2013, I&amp;#8217;ve been following a vegetarian diet for both health and ethical reasons.&lt;/li&gt;
+&lt;li&gt;During my apprenticeship in Freiburg, I took a Tai Chi and Qi Gong beginners&amp;#8217; class to learn more about the relationship between body, mind and energy.&lt;/li&gt;
+&lt;li&gt;From 2010 to 2012 I did voluntary work at &lt;a href=&#34;http://cru.org&#34;&gt;Cru&lt;/a&gt; where I helped organizing Christian services for college students.&lt;/li&gt;
+&lt;li&gt;Wanting to deepen my knowledge of western and eastern religious traditions as well as contemporary movements I took courses in Religious Studies and Protestant Theology at the University of Heidelberg.&lt;/li&gt;
+&lt;li&gt;During my A levels, I practiced &lt;a href=&#34;https://en.wikipedia.org/wiki/Aikido&#34;&gt;Aikido&lt;/a&gt; and meditation for almost a year. I studied the philosophical works of Aikido&amp;#8217;s founder, Ueshiba Morihei, a pacifist and spiritual master.&lt;/li&gt;
+&lt;li&gt;In 2004, I got acquainted with Traditional Chinese Medicine and Feng Shui, developing a more holistic view of the world.&lt;/li&gt;
+&lt;li&gt;From 2004 to 2006 I was involved in organizing meet-ups for highly gifted young adults and adults throughout Germany where I got connected to a wide variety of people, interests and world-views.&lt;/li&gt;
+&lt;li&gt;Although being baptized as a baby in Protestant tradition, I grew up in a largely secular household. I would approve of humanist ideals as put forth by &lt;a href=&#34;https://humanism.org.uk/humanism/the-humanist-tradition/20th-century-humanism/gene-roddenberry/&#34;&gt;Gene Roddenberry&lt;/a&gt; and &lt;a href=&#34;http://www.catb.org/esr/faqs/hacker-howto.html&#34;&gt;Eric S. Raymond&amp;#8217;s&lt;/a&gt; writings on hacker culture.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Resume/CV</title>
+      <link>https://thomasheller.github.io/cv/</link>
+      <pubDate>Sun, 25 Sep 2016 14:19:08 +0200</pubDate>
+      
+      <guid>https://thomasheller.github.io/cv/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://thomasheller.github.io/pdf/cv_deutsch_2017.pdf&#34;&gt;German version (PDF)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-skills&#34;&gt;Technical Skills&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Programming languages: Java, C#, JavaScript, PHP, Go, Delphi&lt;/li&gt;
+&lt;li&gt;Web technologies: HTML, CSS, AJAX, jQuery, jQuery Mobile&lt;/li&gt;
+&lt;li&gt;Databases/Storage: MySQL, SQLite, SQL Anywhere, MSSQL&lt;/li&gt;
+&lt;li&gt;IDEs/CI: Eclipse, Visual Studio, CodePro AnalytiX, Hudson, Jenkins&lt;/li&gt;
+&lt;li&gt;Testing/TDD: JUnit, Mockito, NUnit, MSTest, Robolectric&lt;/li&gt;
+&lt;li&gt;Text tools: LaTeX, vim, AsciiDoc, Pandoc, Markdown&lt;/li&gt;
+&lt;li&gt;Platforms: Ubuntu Linux, OpenBSD, Windows&lt;/li&gt;
+&lt;li&gt;Soft skills: creative, communicative, fast learner&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;work-experience&#34;&gt;Work Experience&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Software Developer&lt;/strong&gt; at &lt;a href=&#34;http://www.medvigo.com&#34;&gt;Medvigo UG&lt;/a&gt;, Koblenz, Germany (September 2016 &amp;#8211; present)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Development of Web-based e-health solutions in PHP/Laravel and Go&lt;/li&gt;
+&lt;li&gt;DevOps responsibilities including management of AWS Cloud resources&lt;/li&gt;
+&lt;li&gt;Experience with WebRTC frameworks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;IT Specialist&lt;/strong&gt; and &lt;strong&gt;Yoga Teacher&lt;/strong&gt; at &lt;a href=&#34;http://www.yoga-vidya.de&#34;&gt;Yoga Vidya e.V.&lt;/a&gt;, Bad Meinberg, Germany (June 2015 &amp;#8211; June 2016)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IT Team Manager (as of February 2016)&lt;/li&gt;
+&lt;li&gt;Management of Windows Server/Active Directory/Exchange infrastructure&lt;/li&gt;
+&lt;li&gt;Management of Aastra telecommunications server and VoIP phones&lt;/li&gt;
+&lt;li&gt;Diagnosing and resolving hardware, software and end user problems&lt;/li&gt;
+&lt;li&gt;Java development of text parsing/generation tools interfacing with MediaWiki&lt;/li&gt;
+&lt;li&gt;Guiding meditations&lt;/li&gt;
+&lt;li&gt;Assistant teacher in yoga classes and teacher training courses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;IT Specialist&lt;/strong&gt; at &lt;a href=&#34;http://www.support-it.de&#34;&gt;Support-IT GbR&lt;/a&gt;, Freiburg im Breisgau, Germany (March 2015 &amp;#8211; April 2015)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;On-site IT support for English and German speaking customers in the Freiburg area&lt;/li&gt;
+&lt;li&gt;Management of Windows Server/Active Directory/Exchange infrastructure&lt;/li&gt;
+&lt;li&gt;PHP/MySQL web development of time-tracking and inventory management software&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Software Developer (Java/Android, C#)&lt;/strong&gt; at &lt;a href=&#34;http://swing.info&#34;&gt;SWING GmbH&lt;/a&gt;, Freiburg im Breisgau, Germany (August 2013 &amp;#8211; September 2014)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Java development of SWING2Go (Android-based nursing informatics tablet solution)&lt;/li&gt;
+&lt;li&gt;Java and C# development of web interface and database synchronization solutions using Google Protocol Buffers and JSON&lt;/li&gt;
+&lt;li&gt;C# (both ASP.NET and PC) development of SWING Controlling (financial controlling for mobile nursing services)&lt;/li&gt;
+&lt;li&gt;3rd Level Support for end users and system administrators in Germany and Switzerland&lt;/li&gt;
+&lt;li&gt;Training of 1st and 2nd Level Support personnel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;IT Systems Engineer&lt;/strong&gt; (Apprenticeship) at &lt;a href=&#34;http://swing.info&#34;&gt;SWING GmbH&lt;/a&gt;, Freiburg im Breisgau, Germany (September 2010 &amp;#8211; July 2013)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PHP/MySQL prototyping of SWING2Go using jQuery Mobile&lt;/li&gt;
+&lt;li&gt;C#/ASP.NET web development of SWING2Go (mobile data entry software on iPad)&lt;/li&gt;
+&lt;li&gt;C# development of corporate financial controlling tools&lt;/li&gt;
+&lt;li&gt;Redesign of corporate website (implementation in HTML, CSS, JavaScript, VTL)&lt;/li&gt;
+&lt;li&gt;Development of online customer portal using Intrexx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;IT Consultant&lt;/strong&gt; (Internship) at &lt;a href=&#34;http://swing.info&#34;&gt;SWING GmbH&lt;/a&gt;, Freiburg im Breisgau, Germany (May 2010 &amp;#8211; August 2010)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Telephone customer support for end users at nursing services throughout Germany&lt;/li&gt;
+&lt;li&gt;Custom application configuration of nursing informatics software&lt;/li&gt;
+&lt;li&gt;Report design using Combit List&amp;amp;Label&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;education&#34;&gt;Education&lt;/h2&gt;
+
+&lt;p&gt;Student of &lt;strong&gt;Religious Studies&lt;/strong&gt; and &lt;strong&gt;Protestant Theology&lt;/strong&gt; at &lt;a href=&#34;https://www.uni-heidelberg.de/&#34;&gt;Ruprecht Karls University&lt;/a&gt;, Heidelberg, Germany (April 2008 &amp;#8211; April 2010)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Introductory courses on Religious Studies, its methodology and history&lt;/li&gt;
+&lt;li&gt;Introduction to Protestant Theology&lt;/li&gt;
+&lt;li&gt;History of Early Christianity, Moral Theology and Christian Ethics&lt;/li&gt;
+&lt;li&gt;Courses on contemporary developments in religion (such as patchwork religion)&lt;/li&gt;
+&lt;li&gt;Courses on cross-cultural studies regarding reciprocal influences of occidental and eastern (especially Indian) religion as well as new religious movements in Japan&lt;/li&gt;
+&lt;li&gt;Courses on psychology of religion&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Student of &lt;strong&gt;Process Engineering&lt;/strong&gt; at &lt;a href=&#34;http://www.kit.edu&#34;&gt;Karlsruhe Institute of Technology&lt;/a&gt;, Karlsruhe, Germany (September 2007 &amp;#8211; March 2008)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Introductory courses on further mathematics, electrical engineering, applied mechanics, chemistry and materials science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Technical Grammar School&lt;/strong&gt; (IT Branch) at &lt;a href=&#34;http://www.rfgs.de/&#34;&gt;Richard Fehrenbach Vocational School&lt;/a&gt;, Freiburg im Breisgau, Germany (September 2003 &amp;#8211; August 2007)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Object-oriented analysis, design and programming in Java and UML&lt;/li&gt;
+&lt;li&gt;Database design and normalization, ER modeling, SQL programming&lt;/li&gt;
+&lt;li&gt;Microcontroller programming in C and ASM&lt;/li&gt;
+&lt;li&gt;Linux scripting in bash and zsh&lt;/li&gt;
+&lt;li&gt;Introduction to operating system design and network engineering&lt;/li&gt;
+&lt;li&gt;General education in mathematics, physics, chemistry, English, German, French, history, religion and music&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Secondary School&lt;/strong&gt; at &lt;a href=&#34;http://www.max-planck-rs.de/&#34;&gt;Max-Planck-Realschule&lt;/a&gt;, Bad Krozingen, Germany (1997 &amp;#8211; 2003)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Primary School&lt;/strong&gt; at &lt;a href=&#34;http://www.landeck-schule.de/&#34;&gt;Johann-Heinrich-von-Landeck School&lt;/a&gt;, Bad Krozingen, Germany (1993 &amp;#8211; 1997)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://thomasheller.github.io/contact/</link>
+      <pubDate>Thu, 21 Jan 2016 13:01:28 +0100</pubDate>
+      
+      <guid>https://thomasheller.github.io/contact/</guid>
+      <description>
+
+&lt;h2 id=&#34;get-in-touch&#34;&gt;Get in touch&lt;/h2&gt;
+
+&lt;p&gt;Feel free to contact me by e-mail: &lt;a href=&#34;mailto:thomas.m.heller@gmail.com&#34;&gt;thomas.m.heller@gmail.com&lt;/a&gt;&lt;br /&gt;
+Your questions, comments, suggestions are always welcome.&lt;/p&gt;
+
+&lt;h2 id=&#34;contact-details&#34;&gt;Contact details&lt;/h2&gt;
+
+&lt;p&gt;Thomas Heller&lt;br /&gt;
+Wiesenweg 4&lt;br /&gt;
+D-56070 Koblenz&lt;br /&gt;
+Germany&lt;br /&gt;
+Telephone +49 176 78999147&lt;/p&gt;
+
+&lt;h2 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;This is my personal website. The views expressed on these pages are
+mine alone and not those of my employer.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
