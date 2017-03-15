@@ -49,6 +49,7 @@
 &lt;h2 id=&#34;talks&#34;&gt;Talks&lt;/h2&gt;
 
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cN_DpYBzKso&#34;&gt;Concurrency is not Parallelism&lt;/a&gt; by Rob Pike&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=4F72VULWFvc&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=1&#34;&gt;The Clean Code Talks &amp;#8211; Inheritance, Polymorphism, &amp;#038; Testing&lt;/a&gt; by Miško Hevery&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-FRm3VPhseI&amp;amp;#038;index=2&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=2&#34;&gt;The Clean Code Talks &amp;#8211; Global State and Singletons&lt;/a&gt; by Miško Hevery&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RlfLCWKxHJ0&amp;amp;#038;list=PL693EFD059797C21E&amp;amp;#038;index=3&#34;&gt;The Clean Code Talks &amp;#8211; Don&amp;#8217;t Look For Things!&lt;/a&gt; by Miško Hevery&lt;/li&gt;
@@ -72,8 +73,6 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sCLsPruvrpM&#34;&gt;Introduction to Event-Driven Databases Part 1&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=qAN-ruIs3Qo&#34;&gt;Part 2&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=GWDY2fpdAI4&#34;&gt;Part 3&lt;/a&gt; by Ramy Hardan&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;TODO: microservices&lt;/p&gt;
 </description>
     </item>
     
