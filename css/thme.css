@@ -24,6 +24,13 @@ a:link, a:active, a:visited, a:hover { color: #2457ac; }
   }
 }
 
+@media print {
+  #paper {
+    box-shadow: none;
+    margin: 1em auto;
+  }
+}
+
 img#avatar {
   float: right;
   height: 8em;
