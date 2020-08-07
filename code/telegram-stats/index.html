@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Telegram Stats</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body, input {
+      font-family: 'Open Sans', sans-serif;
+    }
+    body, a:link, a:active, a:visited, a:hover {
+      background: #0e1621;
+      color: #f5f5f5;
+    }
+    #slider {
+      width: 960px;
+      margin-left: 20px;
+    }
+    #slider .ui-widget-header {
+      background: #2b5278 !important;
+    }
+    #slider, #legend, #weekdaysbox {
+      margin-left: 20px;
+    }
+    #total-days, #slider, #weekdaysbox, .chartbox, #footer, #copyright {
+      margin-top: 20px;
+    }
+    #legend, #weekdaysbox, .chartbox {
+      display: none;
+    }
+    canvas {
+      background: #2b5278;
+      border-radius: 10px;
+    }
+    input[type=file], input[type=button], select {
+      color: #f5f5f5;
+      border: 1px solid #eee;
+      background: #2b5278;
+    }
+    #copyright {
+      border-top: 1px dotted #f5f5f5;
+      padding-top: .5em;
+      font-size: smaller;
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script>
+      "use strict";
+
+      const chartColors = ['#03cafc', '#fcba03', '#fc03e3'];
+
+      var histMax = null;
+      var reader = null;
+      var timestamps = null;
+
+      $(document).ready(function() {
+        $('#input-file').change(onFile);
+        $('#upload-button').click(onUpload);
+        $('#weekdays').change(onWeekdays);
+        // $.get('range/', null, onRange);
+      });
+
+      function onFile() {
+        $('#upload-button').prop('disabled', false);
+      }
+
+      function onUpload() {
+        var file = document.getElementById('input-file').files[0];
+        reader = new FileReader();
+        reader.onload = onFileLoad;
+        reader.readAsText(file);
+      }
+
+      function onFileLoad(e) {
+        $('#intro').hide('fold');
+
+        var json = JSON.parse(reader.result);
+
+        var range = {
+          min: null,
+          max: null,
+          hist_max: null,
+          days: null,
+        };
+
+        timestamps = [];
+        var totalCount = 0;
+
+        for(var m of json.messages) {
+          if(m.from_id == undefined) {
+            continue;
+          }
+
+          if(m.date == null) {
+            continue;
+          }
+
+          var d = new Date(m.date);
+
+          if(d == undefined) {
+            console.log('ERROR: d null', d);
+          }
+
+          if(range.min == null || d.getTime() < range.min) {
+            range.min = d.getTime();
+          }
+
+          if(range.max == null || d.getTime() > range.max) {
+            range.max = d.getTime();
+          }
+
+          if(timestamps[m.from_id] == null) {
+            timestamps[m.from_id] = [];
+          }
+
+          // console.log(m.from_id, m.date);
+
+          timestamps[m.from_id].push(d);
+
+          totalCount++;
+        }
+
+        console.log(`read ${totalCount} message(s)`);
+
+        range.days = Math.ceil((range.max-range.min) / (1000*60*60*24));
+
+        var histogram = [];
+
+        for(var from_id in timestamps) {
+          // console.log(timestamps[from_id].length);
+          for(var i = 0; i < timestamps[from_id].length; i++) {
+            var ts = timestamps[from_id][i];
+            // console.log(ts);
+
+            var minutes = dateToMinutes(ts);
+
+            if(minutes == null) {
+              console.log('ERROR: null mins', ts);
+            }
+
+            if(histogram[minutes] == null) {
+              histogram[minutes] = 0;
+            }
+
+            histogram[minutes]++;
+          }
+        }
+
+        // console.log(histogram);
+
+        for(var count of histogram) {
+          // console.log(count);
+
+          if(range.hist_max == null || count > range.hist_max) {
+            range.hist_max = count;
+          }
+        }
+
+        console.log('min', range.min);
+        console.log('max', range.max);
+        console.log('hist_max', range.hist_max);
+        console.log('days', range.days);
+
+        $('#total-days').text(range.days + ' days loaded');
+
+        $('#slider').slider({
+          range: true,
+          min: range.min,
+          max: range.max,
+          values: [range.min, range.max],
+          slide: update,
+        });
+
+        histMax = range.hist_max;
+
+        updateLegend(range.min, range.max);
+        $('#legend').show();
+        $('#weekdaysbox').show();
+        updateChart(range.min, range.max);
+
+        document.querySelector('#total-days').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+      }
+
+      function dateToMinutes(date) {
+        return date.getHours()*60 + date.getMinutes();
+      }
+
+      function update(e, ui) {
+        var min = ui.values[0];
+        var max = ui.values[1];
+        updateLegend(min, max);
+        updateChart(min, max);
+      }
+
+      function updateLegend(min, max) {
+        $('#legend #from').text(new Date(min));
+        $('#legend #to').text(new Date(max));
+      }
+
+      function updateChart(min, max) {
+        var histogram = [];
+        var weekdays = $('#weekdays').val();
+
+        for(var from_id in timestamps) {
+          histogram[from_id] = [];
+
+          for(var i = 0; i < timestamps[from_id].length; i++) {
+            var ts = timestamps[from_id][i];
+
+            if(ts.getTime() < min || ts.getTime() > max) {
+              continue;
+            }
+
+            if(weekdays == 'mf' && (ts.getDay() == 0 || ts.getDay() == 1)) {
+              continue;
+            } else if(weekdays == 'we' && (ts.getDay() != 0 && ts.getDay() != 1)) {
+              continue;
+            }
+
+            var minutes = dateToMinutes(ts);
+
+            if(minutes == null) {
+              console.log('ERROR: null mins', ts);
+            }
+
+            if(histogram[from_id][minutes] == null) {
+              histogram[from_id][minutes] = 0;
+            }
+
+            histogram[from_id][minutes]++;
+          }
+        }
+
+        // console.log(histogram);
+
+        var plots = [];
+        var colorIndex = 0;
+
+        for(var from_id in histogram) {
+          var data = [];
+
+          for(var minutes in histogram[from_id]) {
+            data.push({ x: minutes, y: histogram[from_id][minutes] });
+          }
+
+          var color = chartColors[colorIndex%chartColors.length];
+
+          var plot = {
+            'label': from_id,
+            'data': data,
+            'backgroundColor': color,
+            'borderColor': color,
+          };
+
+          plots.push(plot);
+          colorIndex++;
+        }
+
+        // console.log(plots);
+
+        plotChart(plots);
+      }
+
+      function onWeekdays() {
+          var $slider = $('#slider');
+          var values = $slider.slider('values');
+          var min = values[0];
+          var max = values[1];
+          updateChart(min, max);
+      }
+
+      function plotChart(plot) {
+        var ctx = document.getElementById('chart').getContext('2d');
+        var scatterChartData = { datasets: plot };
+
+        if(window.myScatter) {
+          window.myScatter.destroy();
+        }
+
+        window.myScatter = Chart.Scatter(ctx, {
+          data: scatterChartData,
+          options: {
+            responsive: false,
+            title: {
+              display: true,
+              text: 'number of messages by time of day',
+              fontColor: '#f5f5f5',
+              fontFamily: "'Open Sans', sans-serif"
+            },
+            animation: {
+              duration: 0,
+            },
+            hover: {
+              animationDuration: 0,
+            },
+            legend: {
+              labels: {
+                fontColor: '#f5f5f5',
+                fontFamily: "'Open Sans', sans-serif"
+              }
+            },
+            tooltips: {
+              enabled: false,
+              custom: makeTooltip,
+            },
+            scales: {
+              xAxes: [{
+                ticks: {
+                  min: 0,
+                  max: 24*60,
+                  stepSize: 60,
+                  callback: xLabels,
+                  fontColor: '#f5f5f5',
+                  fontFamily: "'Open Sans', sans-serif"
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 1,
+                  max: histMax,
+                  stepSize: 1,
+                  fontColor: '#f5f5f5',
+                  fontFamily: "'Open Sans', sans-serif"
+                }
+              }],
+            },
+          }
+        });
+
+        $('.chartbox').show();
+      }
+
+      function makeTooltip(tooltipModel) {
+        // Tooltip Element
+        var tooltipEl = document.getElementById('chartjs-tooltip');
+
+        // Create element on first render
+        if (!tooltipEl) {
+            tooltipEl = document.createElement('div');
+            tooltipEl.id = 'chartjs-tooltip';
+            tooltipEl.innerHTML = '<table></table>';
+            document.body.appendChild(tooltipEl);
+        }
+
+        // Hide if no tooltip
+        if (tooltipModel.opacity === 0) {
+            tooltipEl.style.opacity = 0;
+            return;
+        }
+
+        // Set caret Position
+        tooltipEl.classList.remove('above', 'below', 'no-transform');
+        if (tooltipModel.yAlign) {
+            tooltipEl.classList.add(tooltipModel.yAlign);
+        } else {
+            tooltipEl.classList.add('no-transform');
+        }
+
+        function getBody(bodyItem) {
+            return bodyItem.lines;
+        }
+
+        // Make custom title
+        if (tooltipModel.dataPoints) {
+          tooltipModel.title = [];
+          tooltipModel.dataPoints.forEach(function(dataPoint) {
+            // var text = makeTime(dataPoint.xLabel) + ' &ndash; ' + dataPoint.yLabel;
+            var text = `${makeTime(dataPoint.xLabel)} (${dataPoint.yLabel})`;
+            tooltipModel.title.push(text);
+          });
+        }
+
+        // Set Text
+        if (tooltipModel.body) {
+            var titleLines = tooltipModel.title || [];
+            var bodyLines = tooltipModel.body.map(getBody);
+
+            var innerHtml = '<thead>';
+
+            titleLines.forEach(function(title) {
+              innerHtml += '<tr><th>' + title + '</th></tr>';
+            });
+            innerHtml += '</thead><tbody>';
+
+            // bodyLines.forEach(function(body, i) {
+            //   var colors = tooltipModel.labelColors[i];
+            //   var style = 'background:' + colors.backgroundColor;
+            //   style += '; border-color:' + colors.borderColor;
+            //   style += '; border-width: 2px';
+            //   var span = '<span style="' + style + '"></span>';
+            //   innerHtml += '<tr><td>' + span + body + '</td></tr>';
+            // });
+
+            innerHtml += '</tbody>';
+
+            var tableRoot = tooltipEl.querySelector('table');
+            tableRoot.innerHTML = innerHtml;
+        }
+
+        // `this` will be the overall tooltip
+        var position = this._chart.canvas.getBoundingClientRect();
+
+        // Display, position, and set styles for font
+        tooltipEl.style.opacity = 1;
+        tooltipEl.style.position = 'absolute';
+        tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+        tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+        tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+        tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+        tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+        tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+        tooltipEl.style.pointerEvents = 'none';
+        tooltipEl.style.background = '#0e1621';
+        tooltipEl.style.color = '#f5f5f5';
+     }
+
+     function xLabels(value, index, values) {
+       return makeTime(value);
+     }
+
+     function makeTime(minutes) {
+       var hh = Math.floor(minutes/60);
+       var mm = minutes%60;
+       return hh + ':' + (mm < 10 ? '0' : '') + mm;
+     }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Telegram Stats</h1>
+      <div id="intro">
+        <p>Generate statistics for Telegram chats.</p>
+        <p>How to:</p>
+        <ol>
+          <li>Get the <a href= "https://desktop.telegram.org/" target="_blank">Telegram desktop client</a></li>
+          <li>Select a chat</li>
+          <li>Open the menu in the upper-right corner (three dots: ⋮)</li>
+          <li>Select <strong>Export chat history</strong></li>
+          <li>Uncheck <strong>Photos</strong></li>
+          <li>Select <strong>Format: JSON</strong></li>
+          <li>Click <strong>Export</strong></li>
+          <li>Load the exported <tt>result.json</tt> file here</li>
+        </ol>
+        <p>Privacy notice: All data will stay on your device.</p>
+      </div>
+      <div id="upload">
+        Load file: <input accept=".json" id="input-file" type="file"> <input id="upload-button" type="button" value="Process!" disabled="disabled">
+      </div>
+      <div id="total-days"></div>
+      <div class="chartbox">
+        <canvas id="chart" width=1000 height=500></canvas>
+      </div>
+      <div id="slider"></div>
+      <div id="legend">
+        From: <span id="from"></span><br>
+        To: <span id="to"></span>
+      </div>
+      <div id="weekdaysbox">
+        Days:
+        <select name="weekdays" id="weekdays">
+          <option value="all">include all days of the week (Mon-Sun)</option>
+          <option value="mf">include only work week (Mon-Fri)</option>
+          <option value="we">include only weekends (Sat-Sun)</option>
+        </select>
+      </div>
+      <div id="copyright">&copy; Thomas Heller 2020</div>
+    </div>
+  </body>
+</html>
