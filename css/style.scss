@@ -1,0 +1,130 @@
+$color_bg: #fff;
+$color_blue: #2165ac;
+$color_blue_dark: #12355a;
+$color_light: #999;
+$font_weight_bold: bold;
+$font_size_1: 2em;
+$font_size_2: 1.5em;
+$font_size_3: 1.05em;
+$font_size_4: .9em;
+$font_size_5: max(min(.9em, 2.75vw), .75em);
+
+a:link, a:visited, a:active, a:hover {
+  color: $color_blue;
+}
+
+body {
+  background: $color_bg;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
+  .container {
+    margin: .75em;
+
+    .content {
+      margin: 0 auto;
+      max-width: 54em;
+
+      h1 {
+        color: $color_blue;
+        font-size: $font_size_1;
+        font-weight: $font_weight_bold;
+        margin: 1em 0;
+      }
+
+      .job {
+        color: $color_blue;
+        font-size: $font_size_2;
+        font-weight: $font_weight_bold;
+        margin: 1em 0;
+      }
+
+      h2 {
+        color: $color_blue_dark;
+        font-size: $font_size_3;
+        font-variant: small-caps;
+        font-weight: $font_weight_bold;
+        margin: 3em 0 .67em 0;
+      }
+      
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        .card {
+          background: $color_bg;
+          border-radius: 1em;
+          box-shadow: #aaa 3px 3px 10px;
+          box-sizing: border-box;
+          display: flex;
+          flex-basis: 100%;
+          margin: .5em;
+          position: relative;
+
+          @media screen and (min-width: 576px) {
+            flex-basis: calc(50% - 1em);
+          }
+          @media screen and (min-width: 768px) {
+            flex-basis: calc(33.33% - 1em);
+          }
+          
+          .link { /* hack to turn whole div into link */
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+          }
+
+          .logo {
+            padding: .25em;
+            
+            img {
+              margin: .33em;
+              width: min(5em, 12.5vw);
+            }
+          }
+
+          .text {
+            margin: .33em .33em .5em 0;
+
+            .title {
+              color: $color_blue_dark;
+              font-size: $font_size_4;
+              font-weight: $font_weight_bold;
+              margin: .5em 0;
+            }
+
+            .description {
+              color: $color_light;
+              font-size: $font_size_5;
+              margin-top: .5em;
+            }
+          }
+        }
+      }
+
+      .email {
+        font-size: $font_size_4;
+      }
+
+      .postal {
+        color: $color_light;
+        font-size: $font_size_5;
+        margin-top: 1em;
+
+        address {
+          margin-top: .5em;
+        }
+      }
+    }
+  }
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}

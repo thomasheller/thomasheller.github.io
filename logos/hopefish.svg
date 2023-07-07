@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 49.999999 49.999999"
+   version="1.1"
+   id="svg1427"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="hopefish.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1429"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.9687352"
+     inkscape:cx="118.67761"
+     inkscape:cy="80.756207"
+     inkscape:window-width="1138"
+     inkscape:window-height="1024"
+     inkscape:window-x="6"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1424">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1948-0-3"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1948-2-6-6"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1948-7"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1948-2-5"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.550618,-90.520475)">
+    <g
+       id="g2314-3"
+       transform="matrix(1.3315432,-0.11649494,0.11649494,1.3315432,5.9789639,49.438616)"
+       style="fill:none"
+       inkscape:export-filename="../../../../../tmp/hopefish.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g2068-2-5"
+         transform="matrix(-0.57025663,0.19978409,0.19366636,0.51190612,49.724989,-12.158741)"
+         style="fill:none;fill-opacity:1;stroke:none;stroke-width:2.60876;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           style="fill:none;fill-opacity:1;stroke:none;stroke-width:2.60876;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 31.429589,93.093091 c 6.010576,-6.068647 14.450673,-9.660533 22.991173,-9.784448 8.847079,-0.128363 17.688722,3.477785 23.922417,9.756984"
+           id="path1946-6-6"
+           sodipodi:nodetypes="csc"
+           inkscape:original-d="m 31.429589,93.093091 c 5.312084,-2.827092 17.664322,-6.95126 22.991173,-9.784448 5.326851,-2.83319 19.836149,7.579431 23.922417,9.756984"
+           inkscape:path-effect="#path-effect1948-0-3" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:none;stroke-width:2.60876;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 31.465867,92.87775 c 5.940809,6.317432 14.526649,10.06511 23.19841,10.126 8.796123,0.0618 17.554516,-3.675612 23.596136,-10.068923"
+           id="path1946-7-1-2"
+           sodipodi:nodetypes="csc"
+           inkscape:original-d="m 31.465867,92.87775 c 5.312084,2.827092 17.871559,7.29281 23.19841,10.126 5.326851,2.83319 19.509868,-7.89137 23.596136,-10.068923"
+           inkscape:path-effect="#path-effect1948-2-6-6" />
+      </g>
+      <g
+         id="g2068-9"
+         transform="matrix(-0.57025663,0.19978409,0.19366636,0.51190612,49.832984,-11.758761)"
+         style="fill:none;stroke-width:2.60876;stroke-dasharray:none">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#010103;stroke-width:2.60876;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 31.429589,93.093091 c 5.775404,-6.362597 14.401892,-10.033806 22.991173,-9.784448 8.755657,0.254188 17.019691,4.364533 23.922417,9.756984 4.62765,3.615148 8.781101,7.836573 12.320659,12.522293"
+           id="path1946-1"
+           sodipodi:nodetypes="cssc"
+           inkscape:original-d="m 31.429589,93.093091 c 5.312084,-2.827092 17.664322,-6.95126 22.991173,-9.784448 5.326851,-2.83319 19.836149,7.579431 23.922417,9.756984 4.086267,2.17755 10.482813,10.314043 12.320659,12.522293"
+           inkscape:path-effect="#path-effect1948-7" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#010103;stroke-width:2.60876;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 31.673104,93.219305 c 5.775406,6.362595 14.401892,10.033805 22.991173,9.784445 8.755657,-0.25419 17.019691,-4.364531 23.922417,-9.756981 4.62765,-3.615148 8.781102,-7.836573 12.320659,-12.522293"
+           id="path1946-7-2"
+           sodipodi:nodetypes="cssc"
+           inkscape:original-d="m 31.673104,93.219305 c 5.312084,2.827092 17.664322,6.951255 22.991173,9.784445 5.326851,2.83319 19.836149,-7.579428 23.922417,-9.756981 4.086267,-2.17755 10.482813,-10.314043 12.320659,-12.522293"
+           inkscape:path-effect="#path-effect1948-2-5" />
+      </g>
+    </g>
+  </g>
+</svg>
